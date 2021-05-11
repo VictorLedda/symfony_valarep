@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Formationsarep{% endblock %}
+
+{% block body %}
+    <h1>Edit Formationsarep</h1>
+
+    {{ include('formationsarep/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('formationsarep_index') }}">back to list</a>
+
+    {{ include('formationsarep/_delete_form.html.twig') }}
+{% endblock %}

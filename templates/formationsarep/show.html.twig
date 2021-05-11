@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formationsarep{% endblock %}
+
+{% block body %}
+    <h1>Formationsarep</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ formationsarep.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ formationsarep.titre }}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>{{ formationsarep.genre }}</td>
+            </tr>
+            <tr>
+                <th>Documentation</th>
+                <td>{{ formationsarep.documentation }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ formationsarep.image }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('formationsarep_index') }}">back to list</a>
+
+    <a href="{{ path('formationsarep_edit', {'id': formationsarep.id}) }}">edit</a>
+
+    {{ include('formationsarep/_delete_form.html.twig') }}
+{% endblock %}
